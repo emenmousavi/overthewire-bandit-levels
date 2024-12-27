@@ -125,7 +125,7 @@ Use the password obtained from Level 3 to log in.
 
 3. The password for the next level is contained within this file.
 
-# Bandit Level 5 Walkthrough
+## Bandit Level 5 Walkthrough
 
 ## Connecting to Bandit Level 5
 
@@ -197,4 +197,51 @@ The password for the next level is contained within this file.
    ```
 
 The password for the next level is contained within this file.
+
+## Connecting to Bandit Level 7
+
+1. Use the following command to connect to Bandit Level 7:
+   ```bash
+   ssh bandit7@bandit.labs.overthewire.org -p 2220
+   ```
+   Enter the password obtained from the previous level.
+
+## Finding the Target File
+
+Open the data.txt file using nano:
+
+   ```bash
+   nano data.txt
+   ```
+
+Search for the word "millinium" within the file:
+1. Press Ctrl + W (or Command + W on Mac).
+2. Type millinium and press Enter.
+3. The password is located next to the word "millinium." Make a note of it for the next level.
+
+
+## Connecting to Bandit Level 8
+
+1. Use the following command to connect to Bandit Level 8:
+   ```bash
+   ssh bandit8@bandit.labs.overthewire.org -p 2220
+   ```
+   
+   Enter the password obtained from the previous level.
+
+## Finding the Target File
+
+Open the data.txt file using nano to see its contents:
+   ```bash
+   nano data.txt
+   ```
+
+After reviewing the file's contents, exit the nano editor by pressing Ctrl + X (or Command + X on Mac) and following the prompts.
+
+Use the sort and uniq commands to identify the unique line in the file:
+   ```bash
+   sort data.txt | uniq -u
+   ```
+
+The unique line contains the password for the next level.
 
